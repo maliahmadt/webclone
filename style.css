@@ -2055,7 +2055,7 @@ html {
   }
   
   :root {
-    --body-color: #0f0d25;
+    --body-color: #90ebfe;
     --body-font: #fff;
     --dark-slate-blue: #434159;
     --light-grey: #cbcbcb38;
@@ -4405,7 +4405,7 @@ html {
   }
   
   .body {
-    background-color: #0f0d25;
+    background-color: #90ebfe;
   }
   
   .case-study-left-side {
@@ -5132,7 +5132,7 @@ html {
   }
   
   .section_hero {
-    background-image: url("https://cdn.prod.website-files.com/657dc82e8097266132937458/6581de86d8e2ab9085495520_Frame%207%20(5).png");
+    background: radial-gradient(circle 500px at 70% 50%,white,  #90ebfe) no-repeat;
     background-position: 100%;
     background-repeat: no-repeat;
     background-size: 65%;
@@ -5158,7 +5158,7 @@ html {
   }
   
   .page-content {
-    background-color: #0f0d25;
+    background-color: #90ebfe;
   }
   
   .result-section {
@@ -6462,10 +6462,10 @@ html {
   }
   
   .footer-link {
-    color: #cac7cf;
+    color: white;
     font-family: Urbanist, sans-serif;
     font-size: 1.125rem;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 2rem;
     text-decoration: none;
   }
@@ -6542,11 +6542,11 @@ html {
   }
   
   .body-small-text {
-    color: #cac7cf;
+    color: black;
     letter-spacing: .01rem;
     font-family: Urbanist, sans-serif;
     font-size: 1.125rem;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 2rem;
   }
   
@@ -10514,7 +10514,7 @@ html {
   }
   
   .auto-fit.sized {
-    width: 70px;
+    width: 80px;
     height: 65px;
     max-height: none;
   }
@@ -11394,10 +11394,8 @@ html {
   }
   
   .service-background-glow {
-    background-image: url("https://cdn.prod.website-files.com/657dc82e8097266132937458/6581de86d8e2ab9085495520_Frame%207%20(5).png");
-    background-position: 75%;
-    background-repeat: no-repeat;
-    background-size: 50%;
+    background: radial-gradient(circle 300px at 60% 60%,white,  #90ebfe) no-repeat;
+    background-size: 100%;
   }
   
   .pricing-heading-max-width {
