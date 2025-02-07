@@ -4556,7 +4556,7 @@ blockquote {
 }
 
 .body {
-  background-color: #90ebfe;
+  background-color: var(--body-color);
 }
 
 .case-study-left-side {
@@ -11572,7 +11572,7 @@ blockquote {
 }
 
 .service-background-glow {
-  background: radial-gradient(circle 300px at 60% 60%, white, #90ebfe) no-repeat;
+  background: radial-gradient(circle 300px at 60% 60%, white, #1A488E) no-repeat;
   background-size: 100%;
 }
 
