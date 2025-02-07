@@ -101,6 +101,8 @@
             "hideDecimalForWholeNumbers": false
         };
     </script>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
 </head>
 
 <body>
@@ -143,6 +145,60 @@
                     100% {
                         transform: translateY(0px);
                     }
+                }
+            </style>
+            <style>
+                .button-link {
+                    position: relative;
+                    display: inline-flex;
+                    align-items: center;
+                    text-decoration: none;
+                    overflow: hidden;
+                    background-color: #007BFF;
+                    /* Adjust button color */
+                    color: white;
+                    padding: 12px 24px;
+                    border-radius: 6px;
+                    font-weight: bold;
+                    transition: background-color 0.3s ease-in-out;
+                }
+
+                .button-link:hover {
+                    background-color: #0056b3;
+                    /* Darker shade on hover */
+                }
+
+                .mask-animated-link {
+                    position: relative;
+                    height: 24px;
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .animate-to-top {
+                    display: flex;
+                    flex-direction: column;
+                    transition: transform 0.4s ease-in-out;
+                }
+
+                .button-link:hover .animate-to-top {
+                    transform: translateY(-100%);
+                }
+
+                .text-block {
+                    text-align: center;
+                    font-size: 16px;
+                    font-weight: bold;
+                    transition: opacity 0.3s ease-in-out;
+                }
+
+                .text-block.vertical-animation-second-element {
+                    opacity: 0;
+                }
+
+                .button-link:hover .text-block.vertical-animation-second-element {
+                    opacity: 1;
                 }
             </style>
         </div>
@@ -266,11 +322,25 @@
             </div>
             <div class="container-video">
                 <div style="padding-top:56.27659574468085%" class="video w-video w-embed">
-                    <iframe class="embedly-embed" width="560" height="315"
-                        src="https://www.youtube.com/embed/yGbHxhvsgGY?si=TfRBvufQZgE3h1XK" title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe id="drive-video" class="embedly-embed"
+                        src="https://drive.google.com/file/d/11ZYWu8kaWWpGLXFoDc6sUwwOpS-MjW-z/preview" width="640"
+                        height="480" allow="autoplay"></iframe>
+
+                    <script>
+                        // Set start and end time in seconds
+                        const startTime = 5;  // Start at 5s
+                        const endTime = 10;   // Loop until 10s
+
+                        // Function to reload video to simulate looping
+                        function loopVideo() {
+                            const iframe = document.getElementById("drive-video");
+                            iframe.src = `https://drive.google.com/file/d/11ZYWu8kaWWpGLXFoDc6sUwwOpS-MjW-z/preview#t=${startTime}`;
+                        }
+
+                        // Auto-reload video when it reaches endTime
+                        setInterval(loopVideo, (endTime - startTime) * 1000);
+                    </script>
+
                 </div>
                 <div class="button_wrapper">
                     <div class="relative_wrapper">
@@ -279,7 +349,6 @@
                             data-src="https://cdn.prod.website-files.com/657dc82e8097266132937458/659a999accb0bcb6942e9cdd_Animation%20-%201704630621176%20(1).json"
                             data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0"
                             data-renderer="svg" data-default-duration="1.1" data-duration="0"></div>
-                        <a href="/book-a-call" class="button-link vsl reduce-margin phone w-button">BOOK A CALL</a>
                         <a href="#book-a-call" class="button-link vsl reduce-margin w-button">BOOK A CALL</a>
                     </div>
                     <div class="div-block-4">
@@ -451,8 +520,10 @@
                                 </div>
                                 <div class="service-step-info ">
                                     <h3 class="heading-five "><strong>Get on Camera</strong><br /></h3>
-                                    <p>Set aside some time to record, and we'll prepare the video ideas & scripts beforehand (Another Offer than only Video Editing). Our team will coach you on the best practices for recording videos that perform and get conversions.</p><img
-                                        src="https://cdn.prod.website-files.com/657dc82e8097266132937458/658b0bd97622e25e5d90b352_camera-fill.svg "
+                                    <p>Set aside some time to record, and we'll prepare the video ideas & scripts
+                                        beforehand (Another Offer than only Video Editing). Our team will coach you on
+                                        the best practices for recording videos that perform and get conversions.</p>
+                                    <img src="https://cdn.prod.website-files.com/657dc82e8097266132937458/658b0bd97622e25e5d90b352_camera-fill.svg "
                                         loading="lazy " alt="" class="image-103 " />
                                 </div>
                             </div>
@@ -479,7 +550,11 @@
                                         src="https://cdn.prod.website-files.com/657dc82e8097266132937458/658b0d04661f9aca80fb1b1c_Group%20302%20(1).svg "
                                         loading="lazy " width="91 " alt="" class="image-103 diff " />
                                     <h3 class="heading-five "><strong>Upload to Any Platform</strong><br /></h3>
-                                    <p>Now you can take your short-form or long form videos and post them on all platforms. Sit back, relax, and watch the views and conversions come in. and yes we will make sure we triple check the quality of videos as there will be no random English caption mistakes or any such revisions as we provide each of our client with a Dedicated Creative Assistant.</p>
+                                    <p>Now you can take your short-form or long form videos and post them on all
+                                        platforms. Sit back, relax, and watch the views and conversions come in. and yes
+                                        we will make sure we triple check the quality of videos as there will be no
+                                        random English caption mistakes or any such revisions as we provide each of our
+                                        client with a Dedicated Creative Assistant.</p>
                                 </div>
                             </div>
                         </div>
@@ -592,24 +667,31 @@
             </div>
             <div class="footer-bottom-container w-container ">
                 <div class="footer-bottom-main-wrapper phone ">
-                    <div class="quick-links "><a href="/" aria-current="page "
-                            class="footer-link w--current ">YT organic</a><a href="/service " class="footer-link ">Ad
-                            creatives</a><a href="/short-form " class="footer-link ">Short Form</a><a
-                            href="/portfolio-one " class="footer-link ">Portfolio</a></div>
-                    <div class="social-icons "><a href="https://twitter.com/theaymanarab " target="_blank "
-                            class="social-media-icon w-inline-block "><img
-                                src="https://cdn.prod.website-files.com/657dc82e8097266132937458/657dc82e8097266132937533_skype.svg "
-                                loading="lazy " width="45 " height="45 " alt="Twitter " /></a><a
-                            href="https://www.instagram.com/theaymanarab/" target="_blank "
+                    <div class="quick-links ">
+                        <a href="/" aria-current="page" class="footer-link w--current ">Introduction</a>
+                        <a href="/service " class="footer-link ">Testimonials</a>
+                        <a href="/short-form " class="footer-link ">Services</a>
+                        <a href="/portfolio-one " class="footer-link ">Process</a>
+                    </div>
+                    <div class="social-icons ">
+                        <a href="https://twitter.com/theaymanarab " target="_blank "
+                            class="social-media-icon w-inline-block ">
+                            <img src="https://cdn.prod.website-files.com/657dc82e8097266132937458/657dc82e8097266132937533_skype.svg "
+                                loading="lazy " width="45 " height="45 " alt="Twitter " />
+                        </a>
+                        <a href="https://www.instagram.com/theaymanarab/" target="_blank "
                             class="social-media-icon w-inline-block "><img
                                 src="https://cdn.prod.website-files.com/657dc82e8097266132937458/657dc82e809726613293754e_instagram.svg "
-                                loading="lazy " width="45 " height="45 " alt="Instagram " /></a><a
-                            href="https://www.youtube.com/@ayman-arab " target="_blank "
+                                loading="lazy " width="45 " height="45 " alt="Instagram " />
+                        </a>
+                        <a href="https://www.youtube.com/@ayman-arab " target="_blank "
                             class="social-media-icon w-inline-block "><img
                                 src="https://cdn.prod.website-files.com/657dc82e8097266132937458/65a9fae885c2bb4c385abb6e_Group%20303.svg "
-                                loading="lazy " width="45 " height="45 " alt="" /></a></div>
+                                loading="lazy " width="45 " height="45 " alt="" />
+                        </a>
+                    </div>
                     <div class="body-small-text ">Designed by <a href="#" target="_blank "
-                            class="radiant-themes ">Konvert</a></div>
+                            class="radiant-themes ">Ahmad</a></div>
                 </div>
             </div>
         </section>
