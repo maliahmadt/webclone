@@ -118,7 +118,7 @@
                 </nav>
                 <div class="div-block-7">
                     <div class="menu-button w-nav-button">
-                        <div class="icon-4 w-icon-nav-menu"></div>
+                        <div class="icon-4 w-icon-nav-menu"><img src="imgs/burger.png" alt="" width="30px" height="30px"></div>
                     </div>
                 </div>
             </div>
@@ -200,9 +200,31 @@
                 .lottie-animation {
                     filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(180deg);
                 }
+
+                @media (max-width: 768px) {
+                    #insta {
+                        display: none;
+                    }
+                }
+            </style>
+            <style>
+                @media (max-width: 768px) {
+                    .iframe-video {
+                        width: auto;
+                        height: auto;
+                        border: none;
+                    }
+                }
+                @media (min-width:768px){
+                .iframe-video{
+                    width: 960px;
+                    height: 580px;
+                    border: none;
+                }}
             </style>
         </div>
         <section class="navbar-one desktop">
+
             <div class="navbar-main-wrapper">
                 <div class="nav-icon-wrapper">
                     <a href="/" aria-current="page"
@@ -259,7 +281,9 @@
                 </div>
             </div>
             <div class="container-video">
-                <iframe style="border: none;" src="https://drive.google.com/file/d/11ZYWu8kaWWpGLXFoDc6sUwwOpS-MjW-z/preview" width="960" height="580" allow="autoplay"></iframe>
+                <iframe class="iframe-video"
+                    src="https://drive.google.com/file/d/11ZYWu8kaWWpGLXFoDc6sUwwOpS-MjW-z/preview" allow="autoplay">
+                </iframe>
                 <div class="button_wrapper">
                     <div class="relative_wrapper">
                         <div class="lottie-animation" data-w-id="6a5e8b5d-b866-3f8a-6e97-7dc33da1d822"
@@ -284,7 +308,7 @@
                     loading="lazy" alt="" class="image-99 floating" />
             </div>
             <img src="imgs/instagram.png" width="50px" height="50px" class="floating"
-                style="position: absolute; top: 200px; left: 150px; rotate: -20deg;" alt="">
+                style="position: absolute; top: 200px; left: 150px; rotate: -20deg;" alt="" id="insta">
         </section>
         <section data-w-id="62406017-a7b4-07ac-41ca-93db4ffbb4b8" class="section_partners">
             <div class="container-width-eleven-hundred w-container">
@@ -426,7 +450,7 @@
                                 style="opacity:0 " height="192 " width="114 " alt=""
                                 data-w-id="3e1eb4d1-22f5-db33-b0a7-3021c1f64664 " class="auto-fit " /></div><img
                             src="https://cdn.prod.website-files.com/657dc82e8097266132937458/6586848c11cda3517e6c96bb_657dc82e8097266132937510_stroke%201.png "
-                            loading="lazy " alt="" class="image-102 " />
+                            loading="lazy " alt="" class="image-102 img-spiral" />
                     </div>
                     <div class="team-two-process-block-right ">
                         <div class="service-process ">
@@ -540,21 +564,19 @@
                         <div class="footer-bottom-main-wrapper ">
                             <div class="quick-links "><a href="#" aria-current="page "
                                     class="footer-link w--current ">Introduction</a>
-                                    <a href="#"
-                                    class="footer-link ">Testimonials</a>
-                                    <a href="#"
-                                    class="footer-link ">Services</a>
-                                    <a href="#" class="footer-link ">Process</a></div>
+                                <a href="#" class="footer-link ">Testimonials</a>
+                                <a href="#" class="footer-link ">Services</a>
+                                <a href="#" class="footer-link ">Process</a>
+                            </div>
                             <div class="social-icons ">
-                                        <a
-                                    href="#" target="_blank "
-                                    class="social-media-icon w-inline-block "><img
+                                <a href="#" target="_blank " class="social-media-icon w-inline-block "><img
                                         src="https://cdn.prod.website-files.com/657dc82e8097266132937458/657dc82e809726613293754e_instagram.svg "
                                         loading="lazy " width="45 " height="45 " alt="Instagram " /></a><a
                                     href="https://www.youtube.com/@saimzsideo" target="_blank "
                                     class="social-media-icon w-inline-block "><img
                                         src="https://cdn.prod.website-files.com/657dc82e8097266132937458/65a9fae885c2bb4c385abb6e_Group%20303.svg "
-                                        loading="lazy " width="45 " height="45 " alt="" /></a></div>
+                                        loading="lazy " width="45 " height="45 " alt="" /></a>
+                            </div>
                             <div class="body-small-text ">Designed by <a href="http://www.trypixelflow.com "
                                     target="_blank " class="radiant-themes ">Ahmad</a></div>
                         </div>
@@ -574,12 +596,7 @@
                                 title="Opt-in for Lead Magnet (Cold Email Wiz Case Study)Email Only ">
                             </iframe>
                             <script src="https://link.msgsndr.com/js/form_embed.js "></script>
-                        </div><a id="w-node-f3f05d35-0a35-15cd-2b6c-c10664dc11d8-4c4a886d " href="/old-home "
-                            class="next-cloud w-inline-block "><img
-                                src="https://cdn.prod.website-files.com/657dc82e8097266132937458/65823362b9ff208ed2142cd7_icon%20HD%20Logo.png "
-                                loading="lazy " width="140 " height="148 " alt=""
-                                srcset="https://cdn.prod.website-files.com/657dc82e8097266132937458/65823362b9ff208ed2142cd7_icon%20HD%20Logo-p-500.png 500w,https://cdn.prod.website-files.com/657dc82e8097266132937458/65823362b9ff208ed2142cd7_icon%20HD%20Logo-p-800.png 800w,https://cdn.prod.website-files.com/657dc82e8097266132937458/65823362b9ff208ed2142cd7_icon%20HD%20Logo.png 998w "
-                                sizes="100vw " /></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -592,8 +609,7 @@
                         <a href="#" class="footer-link ">Process</a>
                     </div>
                     <div class="social-icons ">
-                        <a href="#" target="_blank "
-                            class="social-media-icon w-inline-block "><img
+                        <a href="#" target="_blank " class="social-media-icon w-inline-block "><img
                                 src="https://cdn.prod.website-files.com/657dc82e8097266132937458/657dc82e809726613293754e_instagram.svg "
                                 loading="lazy " width="45 " height="45 " alt="Instagram " />
                         </a>
