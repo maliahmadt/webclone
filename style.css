@@ -3526,8 +3526,8 @@ blockquote {
 }
 
 .nav-icon-wrapper {
-  border-bottom: 1px #3a3850;
-  border-right: 1px solid #3a3850;
+  border-bottom: 1px white;
+  border-right: 1px solid white;
   justify-content: center;
   align-items: center;
   min-width: 180px;

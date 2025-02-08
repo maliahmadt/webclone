@@ -119,7 +119,8 @@
 
                 <div class="div-block-7">
                     <div class="menu-button w-nav-button">
-                        <div class="icon-4 w-icon-nav-menu"><img src="imgs/burger.png" alt="" width="30px" height="30px"></div>
+                        <div class="icon-4 w-icon-nav-menu"><img src="imgs/burger.png" alt="" width="30px"
+                                height="30px"></div>
                     </div>
                 </div>
             </div>
@@ -208,21 +209,6 @@
                     }
                 }
             </style>
-            <style>
-                @media (max-width: 768px) {
-                    .iframe-video {
-                        width: auto;
-                        height: auto;
-                        border: none;
-                    }
-                }
-                @media (min-width:768px){
-                .iframe-video{
-                    width: 960px;
-                    height: 580px;
-                    border: none;
-                }}
-            </style>
         </div>
         <section class="navbar-one desktop">
 
@@ -282,9 +268,131 @@
                 </div>
             </div>
             <div class="container-video">
-                <iframe class="iframe-video"
-                    src="https://drive.google.com/file/d/11ZYWu8kaWWpGLXFoDc6sUwwOpS-MjW-z/preview" allow="autoplay">
-                </iframe>
+                <div class="video-container">
+                    <video id="myVideo" muted loop>
+                        <source src="mp4/Zvideo.mp4" type="video/mp4">
+                    </video>
+                    <div class="controls">
+                        <button id="playPauseBtn" class="custom-vcl-btn play-btn">▶</button>
+                        <button id="muteBtn" class="custom-vcl-btn mute-btn">🔊</button>
+                    </div>
+                    <style>
+                        .video-container {
+                            position: relative;
+                            width: 80%;
+                            max-width: 700px;
+                            margin: 20px auto;
+                        }
+
+                        video {
+                            width: 100%;
+                            border-radius: 10px;
+                        }
+
+                        .controls {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                        }
+
+                        .custom-vcl-btn {
+                            padding: 15px;
+                            font-size: 24px;
+                            border: none;
+                            background: rgba(0,123,255,0.8);
+                            color: white;
+                            cursor: pointer;
+                            border-radius: 50%;
+                            width: 60px;
+                            height: 60px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        .play-btn {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+
+                        .mute-btn {
+                            position: absolute;
+                            top: 20px;
+                            right: 20px;
+                            width: 40px;
+                            height: 40px;
+                            font-size: 18px;
+                        }
+
+                        .custom-vcl-btn:hover {
+                            background: rgba(0,86,179,0.9);
+                        }
+
+                    </style>
+                    <script>
+                        const video = document.getElementById("myVideo");
+                        const playPauseBtn = document.getElementById("playPauseBtn");
+                        const muteBtn = document.getElementById("muteBtn");
+
+                        let isLooping = true;
+
+                        // Auto-play loop from 5s to 10s on load
+                        window.addEventListener('load', () => {
+                            video.muted = true;
+                            
+                            function loopSection() {
+                                if (!isLooping) return;
+                                
+                                video.currentTime = 5;
+                                video.play();
+                                
+                                setTimeout(() => {
+                                    if (isLooping) {
+                                        video.pause();
+                                        loopSection();
+                                    }
+                                }, 5000); // Loop 5s section
+                            }
+                            
+                            loopSection();
+                        });
+
+                        // Play/Pause Video
+                        playPauseBtn.addEventListener("click", () => {
+                            if (video.paused) {
+                                isLooping = false; // Stop the loop
+                                video.currentTime = 0; // Start from beginning
+                                video.muted = false;
+                                video.play();
+                                playPauseBtn.style.position = "absolute";
+                                playPauseBtn.style.top = "90%";
+                                playPauseBtn.style.left = "50%";
+                                playPauseBtn.textContent = "⏸";
+                                muteBtn.textContent = "🔊";
+                            } else {
+                                video.pause();
+                                playPauseBtn.textContent = "▶";
+                                loopSection();
+                            }
+                        });
+
+                        muteBtn.addEventListener("click", () => {
+                            video.muted = !video.muted;
+                            muteBtn.textContent = video.muted ? "🔇" : "🔊";
+                        });
+
+                        // Reset on video end
+                        video.addEventListener("ended", () => {
+                            video.currentTime = 0;
+                            playPauseBtn.textContent = "▶";
+                            isLooping = true; // Re-enable looping after full playback
+                        });
+                    </script>
+                </div>
                 <div class="button_wrapper">
                     <div class="relative_wrapper">
                         <div class="lottie-animation" data-w-id="6a5e8b5d-b866-3f8a-6e97-7dc33da1d822"
@@ -602,11 +710,11 @@
             <div class="footer-bottom-container w-container ">
                 <div class="footer-bottom-main-wrapper phone ">
                     <div class="quick-links "><a href="index.html" aria-current="page "
-                        class="footer-link w--current ">Introduction</a>
-                    <a href="#testimonials" class="footer-link ">Testimonials</a>
-                    <a href="service.html" class="footer-link ">Services</a>
-                    <a href="#our-approach" class="footer-link ">Process</a>
-                </div>
+                            class="footer-link w--current ">Introduction</a>
+                        <a href="#testimonials" class="footer-link ">Testimonials</a>
+                        <a href="service.html" class="footer-link ">Services</a>
+                        <a href="#our-approach" class="footer-link ">Process</a>
+                    </div>
                     <div class="social-icons ">
                         <a href="#" target="_blank " class="social-media-icon w-inline-block "><img
                                 src="https://cdn.prod.website-files.com/657dc82e8097266132937458/657dc82e809726613293754e_instagram.svg "
