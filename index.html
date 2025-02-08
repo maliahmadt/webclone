@@ -598,12 +598,14 @@
                     </div>
                 </div>
                 <style>
-                    .service-step-progress {
-                        position: absolute;
-                        top: 0;
-                        right: 0;
-                        width: 2px;
-                        height: 100%;
+                    @media (min-width: 768px) {
+                        .service-step-progress {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            width: 2px;
+                            height: 100%;
+
                         background: linear-gradient(to bottom, #022760, #93b9f3);
                         transform: scaleY(0);
                         transform-origin: top;
@@ -614,6 +616,7 @@
                         position: relative;
                         overflow: hidden;
                     }
+                }
                 </style>
                 
                 <script>
