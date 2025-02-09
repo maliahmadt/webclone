@@ -5197,26 +5197,32 @@ blockquote {
   overflow: hidden;
 }
 
+.home-one-clients {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+}
+
 .clients-marquee {
   display: flex;
   align-items: center;
-  gap: 70px;
-  /* Controls the spacing between images */
-  width: max-content;
-  /* Ensures it doesn't wrap */
+  gap: 70px; /* Default spacing for desktop */
+  width: max-content; /* Prevents wrapping */
   animation: marquee 10s linear infinite;
 }
 
+/* Marquee Animation */
 @keyframes marquee {
   from {
     transform: translateX(0);
   }
-
   to {
     transform: translateX(-50%);
   }
 }
 
+/* Duplicate the second marquee to continue smooth looping */
 .clients-marquee:last-child {
   position: absolute;
   top: 0;
@@ -5224,9 +5230,32 @@ blockquote {
   animation: marquee 10s linear infinite;
 }
 
+/* Responsive Design */
+@media (max-width: 1024px) { /* Tablet */
+  .clients-marquee {
+    gap: 50px;
+    animation-duration: 15s; /* Slower for smooth scrolling */
+  }
+}
+
+@media (max-width: 768px) { /* Mobile */
+  .clients-marquee {
+    gap: 30px;
+    animation-duration: 18s;
+  }
+}
+
+@media (max-width: 480px) { /* Small Mobile */
+  .clients-marquee {
+    gap: 20px;
+    animation-duration: 20s;
+  }
+}
+
+/* Overlay Gradient Adjustments */
 .overlay-marque {
   background-image: linear-gradient(to right, #1A488E, #0000);
-  width: 30%;
+  width: 20%; /* Adjust for better coverage */
   position: absolute;
   inset: 0% auto 0% 0%;
 }
@@ -5235,6 +5264,7 @@ blockquote {
   background-image: linear-gradient(270deg, #1A488E 8%, #0000);
   inset: 0% 0% 0% auto;
 }
+
 
 
 .border-radius-ten {
