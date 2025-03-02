@@ -5898,7 +5898,7 @@ blockquote {
 }
 
 .section_case_studies {
-  background: radial-gradient(circle 500px at 70% 70%, white, #1A488E) no-repeat;
+  background:linear-gradient( #1A488E, #77a8f2,#1A488E);
 }
 
 .service-details-grid {
@@ -9002,8 +9002,8 @@ blockquote {
   padding-left: 2rem;
   padding-right: 2rem;
 }
-
 .service-hero-banner {
+  margin: 0 auto;
   background-image: none;
   background-position: 0 0;
   background-repeat: repeat;
