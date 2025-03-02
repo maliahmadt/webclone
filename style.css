@@ -5334,7 +5334,7 @@ blockquote {
 
 .section_hero {
   /* background: radial-gradient(circle 300px at 70% 50%, #8ca3c6, #1A488E) no-repeat; */
-  background:linear-gradient( #1A488E, #77a8f2,#1A488E) no-repeat;
+  background:linear-gradient( #1A488E, #77a8f2,#1A488E);
   flex-direction: column;
   padding-top: 0;
   padding-bottom: 60px;
