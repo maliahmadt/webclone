@@ -11617,10 +11617,10 @@ blockquote {
   background-size: auto, auto, auto, auto, auto, auto, auto;
 }
 
-.service-background-glow {
+/* .service-background-glow {
   background: radial-gradient(circle 300px at 60% 60%, white, #1A488E) no-repeat;
   background-size: 100%;
-}
+} */
 
 .pricing-heading-max-width {
   max-width: 994px;
