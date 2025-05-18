@@ -116,6 +116,7 @@
                     <a href="#testimonials" class="nav-link w-nav-link">Testimonials</a>
                     <a href="service.html" class="nav-link w-nav-link">Services</a>
                     <a href="#our-approach" class="nav-link w-nav-link">Process</a>
+                    <a href="#pricing" class="nav-link w-nav-link">Pricing</a>
                 </nav>
 
                 <div class="div-block-7">
@@ -243,6 +244,12 @@
                             <li class="list-item-2">
                                 <a href="#our-approach" class="link-block-3 w-inline-block">
                                     <div class="text-block home-three-dropdown-menu">Process</div>
+                                </a>
+                            </li>
+                            </li>
+                            <li class="list-item-2">
+                                <a href="#pricing" class="link-block-3 w-inline-block">
+                                    <div class="text-block home-three-dropdown-menu">Pricing</div>
                                 </a>
                             </li>
                         </ul>
@@ -647,7 +654,111 @@
                 </script>
                 
             </section>
-        </div>
+        <section id="pricing" class="pricing-section">
+            <div class="container">
+                <h2 class="text-align-center"><strong>Our Pricing</strong></h2>
+                <div class="pricing-cards-wrapper">
+                    <div class="pricing-card">
+                        <h3 class="pricing-title">Starter</h3>
+                        <div class="pricing-amount">$250</div>
+                        <div class="pricing-details">30 Videos<br><span class="per-video">($8/video)</span></div>
+                        <ul class="pricing-features">
+                            <li>High Quality Editing</li>
+                            <li>Fast Turnaround</li>
+                            <li>Dedicated Creative Assistant</li>
+                        </ul>
+                        <a href="#book-a-call" class="button-link vsmall w-button">Get Started</a>
+                    </div>
+                    <div class="pricing-card popular">
+                        <div class="popular-badge">Best Value</div>
+                        <h3 class="pricing-title">Pro</h3>
+                        <div class="pricing-amount">$500</div>
+                        <div class="pricing-details">120 Videos<br><span class="per-video">($4/video)</span></div>
+                        <ul class="pricing-features">
+                            <li>All Starter Features</li>
+                            <li>Priority Support</li>
+                            <li>Content & Script Research</li>
+                        </ul>
+                        <a href="#book-a-call" class="button-link vsmall w-button">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <style>
+                .pricing-section {
+                    padding: 60px 0 40px 0;
+                    background: #1a488e;
+                }
+                .pricing-cards-wrapper {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 32px;
+                    margin-top: 32px;
+                }
+                .pricing-card {
+                    background: #fff;
+                    border-radius: 12px;
+                    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+                    padding: 36px 28px 32px 28px;
+                    width: 320px;
+                    text-align: center;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .pricing-card.popular {
+                    border: 2px solid #007BFF;
+                }
+                .popular-badge {
+                    position: absolute;
+                    top: -18px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: #007BFF;
+                    color: #fff;
+                    font-size: 13px;
+                    font-weight: bold;
+                    padding: 4px 16px;
+                    border-radius: 16px;
+                    letter-spacing: 1px;
+                }
+                .pricing-title {
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    margin-bottom: 12px;
+                }
+                .pricing-amount {
+                    font-size: 2.2rem;
+                    font-weight: 800;
+                    color: #007BFF;
+                    margin-bottom: 8px;
+                }
+                .pricing-details {
+                    font-size: 1.1rem;
+                    margin-bottom: 18px;
+                }
+                .per-video {
+                    color: #5f7481;
+                    font-size: 0.95em;
+                }
+                .pricing-features {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0 0 22px 0;
+                }
+                .pricing-features li {
+                    margin-bottom: 8px;
+                    font-size: 1rem;
+                }
+                @media (max-width: 900px) {
+                    .pricing-cards-wrapper {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                }
+            </style>
+        </section>
         <section id="book-a-call" data-w-id="b3e6028d-51d6-49e3-6b34-d0bc2dabf56c " class="interest pricing-one-cta ">
             <div class="main-block interest-block pricing-one-cta ">
                 <div class="cta-text-wrapper ">
