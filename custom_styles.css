@@ -1,0 +1,262 @@
+* {
+    -webkit-font-smoothing: antialiased;
+}
+
+.slick-list {
+    overflow: visible;
+}
+
+.slick-track {
+    cursor: grab;
+}
+
+.slick-slide {
+    outline: none;
+    opacity: .2;
+}
+
+.slick-slide.slick-center {
+    opacity: 1;
+}
+
+.slick-dots {
+    bottom: -70px;
+}
+
+.slick-dots li button {
+    display: block;
+    width: 10px;
+    height: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: #5f7481;
+    overflow: hidden;
+}
+
+.slick-dots li.slick-active button {
+    transform: scale(1.3);
+    background: #fff;
+}
+
+.slick-dots li.slick-active button::before {
+    display: none;
+}
+
+.slick-dots li button:before {
+    content: '';
+    color: transparent;
+}
+
+.pricing-section {
+    background: #1A488E;
+    padding: 60px 0 40px 0;
+}
+
+.pricing-cards-wrapper {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    background: #1ba3dd;
+    border-radius: 28px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10);
+    width: 320px;
+    padding: 40px 30px 32px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.pricing-card .videos-count {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.pricing-card .old-price {
+    font-size: 1.3rem;
+    color: #ff4d4f;
+    font-weight: bold;
+    text-decoration: line-through;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.pricing-card .new-price {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #ffc93c;
+    margin-bottom: 16px;
+    margin-top: 0;
+}
+
+.pricing-card .per-video {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 18px;
+}
+
+.pricing-card .badge {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    background: #e53935;
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 50px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+    z-index: 2;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.pricing-note {
+    text-align: center;
+    margin-top: 32px;
+    color: #ffc93c;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 900px) {
+    .pricing-cards-wrapper {
+        gap: 30px;
+    }
+
+    .pricing-card {
+        width: 90vw;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 600px) {
+    .pricing-cards-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .pricing-card {
+        width: 98vw;
+        max-width: 360px;
+        padding: 30px 10px 24px 10px;
+    }
+}
+
+.floating {
+    animation: floating 5s ease-in-out 0s infinite;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.button-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    overflow: hidden;
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button-link:hover {
+    background-color: #0056b3;
+}
+
+.mask-animated-link {
+    position: relative;
+    height: 24px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.animate-to-top {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s ease-in-out;
+}
+
+.button-link:hover .animate-to-top {
+    transform: translateY(-100%);
+}
+
+.text-block {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.text-block.vertical-animation-second-element {
+    opacity: 0;
+}
+
+.button-link:hover .text-block.vertical-animation-second-element {
+    opacity: 1;
+}
+
+.lottie-animation {
+    filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(180deg);
+}
+
+@media (max-width: 768px) {
+    #insta {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .service-step-progress {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(to bottom, #022760, #93b9f3);
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 1s ease-in-out;
+    }
+
+    .service-step-number-block {
+        position: relative;
+        overflow: hidden;                                   
+    }
+}
+
+wistia-player[media-id='k7jh3g94i5']:not(:defined) {
+    background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/k7jh3g94i5/swatch');
+    display: block;
+    filter: blur(5px);
+    padding-top: 56.25%;
+}
