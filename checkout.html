@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Checkout | zsideocontent</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="custom_styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="checkout-page">
+  <div class="page-content">
+    <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar-2 w-nav">
+      <div class="container-3 w-container">
+        <a href="/" class="brand-2 w-nav-brand"><img src="imgs/logo.png" width="73" alt=""/></a>
+        <nav role="navigation" class="nav-menu-2 w-nav-menu">
+          <a href="index.html" class="nav-link w-nav-link">Introduction</a>
+          <a href="service.html" class="nav-link w-nav-link">Services</a>
+          <a href="contact.html" class="nav-link w-nav-link">Contact Us</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="section_hero">
+      <div class="heading-text">
+        <h1 class="text-align-center home-two-heading-max-width centered"><strong>Checkout</strong></h1>
+        <h2 class="header-two text-align-center"><em>This checkout is for services — we do not ship physical products.</em></h2>
+      </div>
+    </section>
+
+    <section class="default-container w-container" style="padding:40px 20px;max-width:900px;margin:0 auto;color:#222;">
+      <p>Please confirm your details and the service you are purchasing. Note: final scope and price will be confirmed after we review your brief.</p>
+
+      <form id="checkoutForm" style="display:flex;flex-direction:column;gap:12px;">
+        <label for="service">Service / Package</label>
+        <select id="service" name="service" required style="padding:10px;border-radius:8px;border:1px solid #e6edf3;">
+          <option value="starter">Starter — Sample package</option>
+          <option value="pro">Pro — Monthly retainer</option>
+          <option value="agency">Agency — Enterprise</option>
+        </select>
+
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" required placeholder="Your name" style="padding:10px;border-radius:8px;border:1px solid #e6edf3;"/>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="you@example.com" style="padding:10px;border-radius:8px;border:1px solid #e6edf3;"/>
+
+        <label for="notes">Notes / Project brief</label>
+        <textarea id="notes" name="notes" rows="6" placeholder="Briefly describe your needs" style="padding:10px;border-radius:8px;border:1px solid #e6edf3;"></textarea>
+
+        <div style="display:flex;gap:12px;align-items:center;">
+          <button type="submit" class="button-link vsmall w-button">Proceed</button>
+          <a href="contact.html" class="button-link vsl w-button">Contact Us</a>
+        </div>
+
+        <p style="font-size:13px;color:#555;margin-top:8px;">Note: Since we are a service-based business, any payment collected is for the service engagement. Final deliverables and timelines will be confirmed after scoping. Refunds are available only under specific conditions — see our <a href="refund-policy.html">Refund Policy</a>.</p>
+      </form>
+
+    </section>
+
+    <section id="opt-in-form" class="footer-two">
+      <div class="footer-two-container w-container">
+        <div class="footer-bottom-container w-container">
+          <div class="footer-bottom-main-wrapper phone" style="display:flex;flex-direction:column;align-items:center;text-align:center;">
+            <div class="quick-links" style="text-align:center;">
+              <a href="index.html" class="footer-link">Introduction</a>
+              <a href="contact.html" class="footer-link">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.getElementById('checkoutForm').addEventListener('submit', function(e){
+        e.preventDefault();
+        alert('Checkout submitted (mock). We will contact you to confirm scope and payment.');
+      });
+    </script>
+  </div>
+</body>
+</html>

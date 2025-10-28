@@ -260,3 +260,60 @@ wistia-player[media-id='k7jh3g94i5']:not(:defined) {
     filter: blur(5px);
     padding-top: 56.25%;
 }
+
+/* Contact page overrides: remove gradients and style form */
+.contact-page .section_hero {
+    background: none !important;
+    background-color: #f9fafb; /* subtle off-white */
+    padding: 40px 20px;
+}
+
+.contact-page .contact-grid {
+    gap: 32px;
+}
+
+.contact-page .contact-form .form label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+    color: #0f172a;
+}
+
+.contact-page .contact-form .form input,
+.contact-page .contact-form .form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #e6edf3;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 15px;
+    box-shadow: none;
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.contact-page .contact-form .form input:focus,
+.contact-page .contact-form .form textarea:focus {
+    outline: none;
+    border-color: #2b6cb0;
+    box-shadow: 0 8px 30px rgba(43,108,176,0.12);
+}
+
+.contact-page .contact-form .form textarea { min-height: 140px; }
+
+.contact-page .button-link.vsmall.w-button,
+.contact-page .contact-form .form .button-link {
+    background: #0b5ed7;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+}
+
+.contact-page .card { background: #ffffff; }
+
+/* Make sure any decorative gradients from components don't show on contact page */
+.contact-page .service-step-progress,
+.contact-page .pricing-card,
+.contact-page .pricing-section {
+    background: none !important;
+}
