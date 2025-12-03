@@ -398,6 +398,28 @@ wistia-player[media-id='k7jh3g94i5']:not(:defined) {
     transition: color 0.2s ease;
 }
 
+/* Footer lower links (added pages) */
+.footer-lower-links {
+    font-size: 13px;
+    color: #94a3b8;
+}
+.footer-lower-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    margin: 0 6px;
+    font-size: 13px;
+}
+.footer-lower-links a:hover {
+    color: #fff;
+}
+
+.site-footer .copyright {
+    color: #94a3b8;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 8px;
+}
+
 .legal-links a:hover {
     color: #fff;
 }
